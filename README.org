@@ -1,0 +1,29 @@
+* What's all this then?
+This is a container thet houses my development environment and its
+primary motivation is to qucikly and consistently recreate that
+environment on any machine.
+
+* Building the container
+Execute =./build.sh=. This creates an image called /dev_env/.
+
+* Running the container
+Execute =run.sh=. The conatiner is run with the current user's id and
+group. The home directory is shared with the container. The container
+runs bash and executing vncserver sets up the development environment
+(Executing vncserver as part of container startup is yet to be done).
+
+When =vmcserver= is run for the very first time, it creates a default
+configuration in =~/.vnc=. Edit =~/.vnc/xstartup= and execute =i3=.
+
+When running =git= for the first time, it is necessary to store email
+and name in global git config using the following commands.
+
+```
+git config --global user.email "..."
+git config --global user.name "..."
+
+```
+* Connecting to VNC server in container
+Execute =vncviewer <IP>:5901=. Provide the password when prompted. The
+client runs in fullscreen mode. Press *Shift-F8* to access the menu
+options.
