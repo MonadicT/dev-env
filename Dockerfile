@@ -1,6 +1,6 @@
 FROM archlinux/base
 
-RUN pacman -Syu --noconfirm binutils net-tools
+RUN pacman -Syu --noconfirm binutils net-tools core/openssh
 
 RUN pacman --noconfirm -Syu \
 	emacs\
