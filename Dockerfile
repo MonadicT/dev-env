@@ -25,5 +25,29 @@ RUN pacman -Syu --noconfirm tigervnc rxvt-unicode
 
 RUN pacman --noconfirm -Syu ttf-dejavu community/terminus-font iputils
 
+# Java
+RUN pacman --noconfirm -Syu extra/jdk8-openjdk
+
+# Clojure
+RUN pacman --noconfirm -Syu community/clojure
+
+# Go
+RUN pacman --noconfirm -Syu extra/go extra/go-tools
+
+# Haskell
+RUN pacman --noconfirm -Syu community/ghc
+
+# Python
+RUN pacman --noconfirm -Syu extra/python2 community/jupyter-notebook
+
+# Rust
+RUN pacman --noconfirm -Syu community/rust
+
+# Elixir
+RUN pacman --noconfirm -Syu community/elixir
+
+# Node
+RUN pacman --noconfirm -Syu nodejs
+
 EXPOSE 5901
 RUN bash
