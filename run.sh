@@ -17,6 +17,9 @@ docker run --user $(id -u $USER):$(id -g $USER) \
 	--privileged \
 	-p 5901:5901 \
 	-v /etc/passwd:/etc/passwd:ro \
+	-v /etc/shadow:/etc/shadow:ro \
+	-v /etc/group:/etc/group:ro \
+	-v /etc/sudoers:/etc/sudoers:ro \
         -v $HOME:/$HOME \
 	-it \
 	dev-env 
